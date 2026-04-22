@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Analytics Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="title">📊 Student Performance Analytics</h1>
+
+<div class="card">
+    <h2>Add Student</h2>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="subject" placeholder="Subject">
+    <input type="number" id="grade" placeholder="Grade (0-100)">
+
+    <button onclick="addStudent()">Add</button>
+    <button onclick="clearData()">Clear All</button>
+</div>
+
+<div class="card">
+    <h2>📈 Overview</h2>
+    <p id="gpa"></p>
+    <p id="top"></p>
+    <p id="risk"></p>
+</div>
+
+<div class="card">
+    <h2>📋 Records</h2>
+    <table class="table" id="table"></table>
+</div>
+
+<div class="card">
+    <h2>📊 Chart</h2>
+    <canvas id="chart"></canvas>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3>Edit Student</h3>
+        <input type="text" id="editName">
+        <input type="text" id="editSubject">
+        <input type="number" id="editGrade">
+        <button onclick="updateStudent()">Save</button>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
